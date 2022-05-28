@@ -1,6 +1,6 @@
 # Face Recognition Based Attendance System with Face Authentication System
 
-###How I build this project
+## How I build this project
 
 Hello Everyone, Myself Aryan Jaiswal. I am a 2nd-year Undergrad Student in Computer Science and Engineering. I am pursuing my B.tech from the Kalinga Institute of Industrial Technology.
  
@@ -10,3 +10,34 @@ In the starting, I have no idea how to start because I have no more knowledge of
  
 During building this project I have faced a lot of problems such as the installation process of all libraries, connecting with the database, how to use face recognition and how to store the face data etc.
 But solving all the problems finally, I have built this project. Firstly, I build a Face Recognition based Attendance System then after that I decided to build a standard Authentication system using face recognition. Then after building authentication, I attached it with Face Recognition based Attendance System.
+
+
+## System Requirements
+
+1.	Install python version 3.8.5
+2.	Install MySql database
+3.	Install mysql connector by command prompt pip install mysql-connector
+4.	Install pillow by pip install pillow
+5.	Install Tkinter by command prompt pip install tk
+6.	Install OpenCv by pip install opencv-python
+7.	Install Numpy by pip install numpy
+8.	Install Face Recognition manually
+9.	Install os by pip insatll os-sys
+
+
+## Some important point
+
+Please write Student id sequentially otherwise face recognition alorithms will be not work properly.
+
+If the face detector lag its means server working slow because it's database connected with online database system.
+
+If any case get a error of mysql database then please use offline databse which is comment down in whole code.
+Offline database code look like this:- 
+
+#conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                              #database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+#my_cursor = conn.cursor()
+
+Change this code in every python file where it is present, if online database will not worked properly.
+
+Please don't forget to scan face after add student details and user data otherwise face recognition algorithm will not work properly.
