@@ -41,3 +41,19 @@ Offline database code look like this:-
 Change this code in every python file where it is present, if online database will not worked properly.
 
 Please don't forget to scan face after add student details and user data otherwise face recognition algorithm will not work properly.
+
+## Online Databse Credentials
+
+Server: sql6.freemysqlhosting.net
+Name: sql6495753
+Username: sql6495753
+Password: KLdC4PA9zU
+Port number: 3306
+
+## for developer
+
+if you run index.py then its ask username and password.
+For direct login use this:
+username:-- user
+password:-- user
+
