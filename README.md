@@ -24,6 +24,19 @@ But solving all the problems finally, I have built this project. Firstly, I buil
 8.	Install Face Recognition manually
 9.	Install os by pip insatll os-sys
 
+## Features
+
+1. Face Authentication System
+2. Forget Password Option
+3. Update details of student
+4. Delete details of student
+5. Search option
+6. Fetched all the registerd student data in frame
+7. Mark Attendance
+8. View attendance
+9. Export attendance
+10. View Details by scan face
+
 
 ## Some important point
 
