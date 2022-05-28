@@ -328,9 +328,13 @@ class Details:
                 id, predict = clf.predict(gray_image[y:y+h, x:x+w])
                 confidence = int((100*(1-predict/300)))
 
-                conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
-                                               database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
                 my_cursor = conn.cursor()
+
+                #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                #my_cursor = conn.cursor()
 
                 my_cursor.execute(
                     "select Name from student where Student_id="+str(id))
@@ -406,9 +410,12 @@ class Details:
             messagebox.showerror("Error","Student Details Not Found")
         else:
             try:
-                conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
-                                    database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
                 my_cursor = conn.cursor()
+                #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                #my_cursor = conn.cursor()
                 my_cursor = conn.cursor()
                 query=("select * from student where Student_id=%s")
                 value=(self.getid,)
@@ -441,9 +448,12 @@ class Details:
      # fetch data
 
     def fetch_data(self):
-        conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
-                                       database="face_recognition", auth_plugin="mysql_native_password")                #please change it accoridng to database
+        conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
         my_cursor = conn.cursor()
+        #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+        #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+        #my_cursor = conn.cursor()
         my_cursor.execute("Select * from student")
         data = my_cursor.fetchall()
 

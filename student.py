@@ -420,9 +420,12 @@ class Student:
     # fetch data
 
     def fetch_data(self):
-        conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
-                                       database="face_recognition", auth_plugin="mysql_native_password")                #please change it accoridng to database
+        conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
         my_cursor = conn.cursor()
+        #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+        #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+        #my_cursor = conn.cursor()
         my_cursor.execute("Select * from student")
         data = my_cursor.fetchall()
 
@@ -470,9 +473,12 @@ class Student:
 
                     #now connect with database please change according to your database system 
 
-                    conn = mysql.connector.connect(
-                        host="localhost", user="root", password="Aryan@123", database="face_recognition", auth_plugin="mysql_native_password")          #please change it accoridng to database
+                    conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
                     my_cursor = conn.cursor()
+                    #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                    #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                    #my_cursor = conn.cursor()
                     my_cursor.execute("Update student set Dep=%s,Course=%s,Year=%s,Semester=%s,Division=%s,Name=%s,Roll=%s,Gender=%s,Dob=%s,Email=%s,Phone=%s,Address=%s,Teacher=%s,PhotoSample=%s where (Student_id=%s)", (
                         self.var_dep.get(),
                         self.var_course.get(),
@@ -517,9 +523,12 @@ class Student:
                 delete = messagebox.askyesno(
                     "Student Delete Page", "Do you want to delete this student", parent=self.root)
                 if delete > 0:
-                    conn = mysql.connector.connect(
-                        host="localhost", user="root", password="Aryan@123", database="face_recognition", auth_plugin="mysql_native_password")              #please change it accoridng to database
+                    conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
                     my_cursor = conn.cursor()
+                    #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                    #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                    #my_cursor = conn.cursor()
                     sql = "delete from student where Student_id=%s"
                     val = (self.va_std_id.get(),)
                     my_cursor.execute(sql, val)
@@ -564,9 +573,13 @@ class Student:
         
         else:
             try:
-                conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
-                                       database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
                 my_cursor = conn.cursor()
+
+                #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                #my_cursor = conn.cursor()
                 ans=my_cursor.execute("select * from student where "+str(self.var_combo_search.get())+" LIKE '%"+str(self.var_search.get())+"%'")
                 data=my_cursor.fetchall()
                 if len(data)!=0:
@@ -588,9 +601,13 @@ class Student:
 
         else:
             try:
-                conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
-                                               database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                conn = mysql.connector.connect(host="sql6.freemysqlhosting.net", user="sql6495753", password="KLdC4PA9zU",
+                                              database="sql6495753", auth_plugin="mysql_native_password")            #please change it accoridng to database
                 my_cursor = conn.cursor()
+                
+                #conn = mysql.connector.connect(host="localhost", user="root", password="Aryan@123",
+                #                              database="face_recognition", auth_plugin="mysql_native_password")            #please change it accoridng to database
+                #my_cursor = conn.cursor()
                 my_cursor.execute("select * from student")
                 myresult = my_cursor.fetchall()
                 id = 0
